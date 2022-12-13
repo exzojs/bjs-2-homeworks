@@ -1,7 +1,7 @@
 "use strict"
 function solveEquation(a, b, c) {
   let arr = [];
-  let d = b 2 - 4 * a * c;
+  let d = b * 2 - 4 * a * c;
 
   if (d > 0) {
     let x1 = (-b + Math.sqrt(d)) / (2 * a);
@@ -17,18 +17,8 @@ function solveEquation(a, b, c) {
 }
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-  if (isNaN(percent)) {
-    return false;
-  }
-  if (isNaN(contribution)) {
-    return false;
-  }
-  if (isNaN(amount)) {
-    return false;
-  }
-  if (isNaN(countMonths)) {
-    return false;
-  }
+  (isNaN(percent)) || (isNaN(contribution)) || (isNaN(amount)) || (isNaN(countMonths));
+
   let bodyCredit = 0;
 
   let newPesent = percent / 100 / 12;
